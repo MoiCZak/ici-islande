@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ici Island</title>
+    <link rel="shrotcut icon" href="icons/Group_2.png">
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class = "col-md-3"><a href="./index.html"><img src="/src/icons/Group_2.png" alt="logo"></a></div>
+                <div class="searchBox">
+
+                    <input class="searchInput" type="text" name="" placeholder="Search something">
+                    <button class="searchButton" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+            <g clip-path="url(#clip0_2_17)"><g filter="url(#filter0_d_2_17)">
+              <path d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"></path>
+            </g>
+          </g>
+          <defs>
+            <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139" height="29.7139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+              <feOffset dy="4"></feOffset>
+              <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+              <feComposite in2="hardAlpha" operator="out"></feComposite>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_17"></feBlend>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17" result="shape"></feBlend>
+            </filter>
+            <clipPath id="clip0_2_17">
+              <rect width="28.0702" height="28.0702" fill="white" transform="translate(0.403503 0.526367)"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+                         
+        
+                    </button>
+                </div>
+                <ul class="menu">
+                
+                  <div class="nav-right">
+                      <ul class="menu">
+                          <li class="menu_item"><a href="./propos.html" class="menu_link">A propos</a></li>
+                          <li class="menu_item"><a href="./forum.html" class="menu_link">Forum</a></li>
+                      </ul>
+                      <nav class="menu_item">
+                          <a href="./contact.html" class="menu_link"><li class="menu_item but">Proposez un endroit !</li></a>
+                      </nav> 
+                  </div>
+                </ul>
+            </div>
+        </nav>
+  </header>
+
+        
+        <div id="map"></div>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="../island.js"></script>
+            <div class="subheader">
+                <div class="container1">
+                            <div class="buttons">
+                               <button id="button1" > Diamond Beach </button>
+                                <button id="button2" >Stokksnes</button>
+                                <button id="button3" >Látrabjarg</button>
+                                <button id="button4" >Svartifoss</button>
+                                <button id="button5" >Háifoss</button>
+                                <button id="button6" >Hvannadalshnúkur</button>
+                </div>
+            </div>
+          <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://www.gancarczyk.com/wp-content/uploads/2021/10/diamentowa-plaza-14.jpg"  alt="...">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Diamond Beach </h5>
+                  <p>The Diamond Beach is a strip of black sand belonging to the greater Breiðamerkursandur glacial plain, located by Jökulsárlón glacier lagoon on the South Coast of Iceland</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://witcher-tv.ru/wp-content/uploads/2021/08/icelandic-viking-village.jpg"  alt="...">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Stokksnes </h5>
+                  <p>Learn all about the history of Iceland by exploring a recreation of an early Viking settlement called the Viking Village. </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://global.hurtigruten.com/globalassets/photos/excursions/explorer/iceland/bildudalur---latrabjarg-cliff/latrabjarg-bird-cliff-iceland_2500x1250.jpg?width=1900&height=950&transform=DownFill"  alt="...">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Látrabjarg</h5>
+                  <p>The Látrabjarg cliffs in the Westfjords mark both the westernmost point of Iceland and Europe. Hosting millions of birds, it is Europe’s largest bird cliff, 14 km (9 mi) long and 441 (1,444 ft) high.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.mnstatic.com/ce/97/ce9717c380cadc7c37e5a9deb6d6042e.jpg"  alt="...">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Svartifoss</h5>
+                  <p>Svartifoss, in spite of being just 20 meters (66 feet) tall, and not particularly powerful, is one of Iceland’s most popular waterfalls. The beauty of its formation and surroundings draw thousands of guest a year and have inspired artists for centuries.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.locationscout.net/2015/12/haifoss-waterfall-iceland.webp?h=1400&q=83"  alt="...">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Háifoss</h5>
+                  <p>In South-Iceland on the edge of the highland, you will find the third highest waterfall in Iceland, not counting the waterfalls found in Mosárjökull glacier recently. This waterfall is called Háifoss waterfall or the Tall Falls.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://guidetoiceland.imgix.net/788708/x/0/i-slkdncb-x3.jpg?ixlib=php-3.3.0"  alt="...">
+                <div class="overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Hvannadalshnúkur</h5>
+                  <p>Hvannadalshnúkur, or Hvannadalshnjúkur, is the highest peak of Öræfajökull volcanic glacier in Vatnajökull National Park and the tallest mountain in Iceland. Its latest measurement finds it to be 2,109.6 meters (6952 feet) tall.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div></div> 
+          <div class="venez">
+            <h2>Venez parler avec nous !</h2>
+            <div class='venezContain'> <button class = 'fo' src = 'forum.html'>Forum</button>
+              <button class = 'prop'>Proposer une location !</button></div>
+          </div> 
+          <footer>
+            <p>Mentions légales</p>
+            <p>Contact</p>
+          </footer>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

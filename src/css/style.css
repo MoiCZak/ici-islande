@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto&display=swap');
+/* font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif; */
+*{
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+
+h2 {
+    font-family: 'Lato';
+    font-family: sans-serif;
+}
+
+
+header {
+    background-color: #2B2B2B;
+    height: 150px;
+    margin-bottom: 5rem;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    gap: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    font-size: 22px;
+}
+
+.searchBox {
+  display: flex;
+  max-width: 430px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: #2f3640;
+  border-radius: 50px;
+  position: relative;
+  height: 75px;
+}
+
+.searchButton {
+  color: white;
+  position: absolute;
+  right: 8px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+  border: 0;
+  display: inline-block;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+  transform: translateY(-3px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 24px 46px 24px 26px;
+}
+
+li a {
+
+    color: white;
+    text-decoration: none;
+}
+
+.but {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#749B67, #537048);
+    height: 140px;
+    width: 20rem;
+    color: white;
+    font-size: 22px;
+    border: none;
+}
+
+.but:hover {
+    background: linear-gradient(#58754e, #3b5033);
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+#map{
+    height: 400px;
+    width: 50%;  
+    margin: 0 auto;
+    float: left; 
+    transform: translateX(250px);
+}
+.container1 {
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+   
+}
+.buttons {
+    float: right; 
+    width:400px;
+    background-color:#D9D9D9;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    height: 400px;
+    justify-content: space-between;
+    
+   
+   
+}
+.buttons button{
+    
+    background-color:#A4A4A4;
+    border-radius: 20px 20px 20px 20px;
+    width:20%;
+    height: 10%;
+    width: 100%;
+}
+button a {
+    color:white;
+    text-decoration: none;
+}
+#ville1{
+    margin-top: 500px;
+}
+
+
+.slideshow-container {
+  margin-top: 50px;
+    position: relative;
+    background: #f1f1f1f1;
+  }
+  
+ 
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+  
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+ 
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  
+  
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+  }
+  
+ 
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+ 
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+ 
+  q {font-style: italic;}
+  
+
+  .author {color: cornflowerblue;}
+
+  .carousel-item {
+    margin-top: 100px;
+    height: 500px; 
+    overflow: hidden; 
+  
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Цвет затемнения (черный с альфа-каналом 0.5 для полупрозрачности) */
+}
+.carousel-control-prev, .carousel-control-next {
+  width: 10px; 
+  height: 497px; 
+  margin:auto;
+ margin-bottom: 0;
+  background-color: transparent; 
+}
+.carousel-caption h5 {
+  position: absolute;
+  bottom: 100%; 
+  left: 0;
+  transform: translateY(-270px) translateX(-50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); 
+  width: 100%;
+  padding: 10px;
+  color: white; 
+}
+.carousel-caption p {
+  height: 100px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.venez{
+  width: 100%;
+  height: 300px;
+}
+.venez h2{
+margin-top: 100px;
+margin-left: 200px;
+}
+.venezContain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+}
+.venezContain button{
+  margin: 0 10px;
+  width: 504px;
+  height: 140px;
+  color:white;
+  font-size: 30px;
+}
+.fo{
+  background-color:#717171;
+}
+ .prop{
+  background-color:#749B67;
+}
+footer {
+  text-align: end;
+  background-color: #2B2B2B;
+  color: white;
+  display: block;
+  padding: 2rem;
+
+}
+
+.footer-div {
+  padding: 1.5rem 15rem;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
